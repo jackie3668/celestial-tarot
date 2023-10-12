@@ -1,23 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import { sendMsgToOpenAI } from './openai';
 
 function App() {
+  const [userInput, setUserInput] = useState('');
+  const [generatedResponse, setGeneratedResponse] = useState('');
+
+  const handleInputChange = (e) => {
+    setUserInput(e.target.value);
+  };
+
+  const handleSendRequest = async () => {
+    try {
+      const response = await sendMsgToOpenAI(userInput); 
+      setGeneratedResponse(response);
+    } catch (error) {
+      console.error('Error:', error);
+    }
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>OpenAI Test</h1>
+      <textarea
+        rows="4"
+        cols="50"
+        placeholder="Enter your message..."
+        value={userInput}
+        onChange={handleInputChange}
+      ></textarea>
+      <br />
+      <button onClick={handleSendRequest}>Send to OpenAI</button>
+      {generatedResponse && (
+        <div>
+          <h2>Generated Response:</h2>
+          <p>{generatedResponse}</p>
+        </div>
+      )}
     </div>
   );
 }
