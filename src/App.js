@@ -8,9 +8,10 @@ function App() {
   const sendMsgToOpenAI = async () => {
     try {
       console.log("User Input:", userInput);
-      const response = await axios.post('http://localhost:3009/sendMsgToOpenAI', {
-        userMessage: userInput, // Send userMessage directly as an object property
+      const response = await axios.post('https://obscure-wave-66224-85e51207886d.herokuapp.com/sendMsgToOpenAI', {
+        userMessage: userInput,
       });
+      
     
       console.log("Axios Response:", response);
 
