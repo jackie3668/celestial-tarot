@@ -8,14 +8,14 @@ function App() {
   const sendMsgToOpenAI = async () => {
     try {
       console.log("User Input:", userInput);
-      const response = await axios.post('https://obscure-wave-66224-85e51207886d.herokuapp.com/sendMsgToOpenAI', {
+      const response = await axios.post('https://celestial-tarot-api-505d7e2bd446.herokuapp.com/sendMsgToOpenAI', {
         userMessage: userInput,
       });
       
     
       console.log("Axios Response:", response);
 
-      if (response.status === 200) { // Check response status code
+      if (response.status === 200) { 
         const data = response.data;
         console.log("Data:", data.generatedResponse);
         setGeneratedResponse(data);
