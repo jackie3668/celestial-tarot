@@ -1,39 +1,48 @@
 import React, { useState } from 'react';
-import { sendMsgToOpenAI } from './openai';
+import axios from 'axios'; // Import Axios
 
 function App() {
   const [userInput, setUserInput] = useState('');
   const [generatedResponse, setGeneratedResponse] = useState('');
 
-  const handleInputChange = (e) => {
-    setUserInput(e.target.value);
-  };
-
-  const handleSendRequest = async () => {
+  const sendMsgToOpenAI = async () => {
     try {
-      const response = await sendMsgToOpenAI(userInput); 
-      setGeneratedResponse(response);
+      console.log("User Input:", userInput);
+      const response = await axios.post('http://localhost:3009/sendMsgToOpenAI', {
+        userMessage: userInput, // Send userMessage directly as an object property
+      });
+    
+      console.log("Axios Response:", response);
+
+      if (response.status === 200) { // Check response status code
+        const data = response.data;
+        console.log("Data:", data.generatedResponse);
+        setGeneratedResponse(data);
+      } else {
+        console.error('Error making a request to the backend API');
+      }
     } catch (error) {
       console.error('Error:', error);
-    }
-  };
+    }    
+  }
 
   return (
     <div className="App">
-      <h1>OpenAI Test</h1>
+      <h1>OpenAI Chat</h1>
       <textarea
         rows="4"
         cols="50"
         placeholder="Enter your message..."
         value={userInput}
-        onChange={handleInputChange}
+        onChange={(e) => setUserInput(e.target.value)}
       ></textarea>
       <br />
-      <button onClick={handleSendRequest}>Send to OpenAI</button>
+      <button onClick={sendMsgToOpenAI}>Send to OpenAI</button>
       {generatedResponse && (
         <div>
           <h2>Generated Response:</h2>
-          <p>{generatedResponse}</p>
+          <p>{JSON.stringify(generatedResponse)}</p>
+
         </div>
       )}
     </div>
