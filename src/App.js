@@ -1,52 +1,24 @@
-import React, { useState } from 'react';
-import axios from 'axios'; // Import Axios
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Banner, CTA } from './containers';
+import { Question, Shuffle, Landing } from './pages';
+import { Navbar } from './components';
+import './App.css';
 
 function App() {
-  const [userInput, setUserInput] = useState('');
-  const [generatedResponse, setGeneratedResponse] = useState('');
-
-  const sendMsgToOpenAI = async () => {
-    try {
-      console.log("User Input:", userInput);
-      const response = await axios.post('https://obscure-wave-66224-85e51207886d.herokuapp.com/sendMsgToOpenAI', {
-        userMessage: userInput,
-      });
-      
-    
-      console.log("Axios Response:", response);
-
-      if (response.status === 200) { // Check response status code
-        const data = response.data;
-        console.log("Data:", data.generatedResponse);
-        setGeneratedResponse(data);
-      } else {
-        console.error('Error making a request to the backend API');
-      }
-    } catch (error) {
-      console.error('Error:', error);
-    }    
-  }
-
   return (
-    <div className="App">
-      <h1>OpenAI Chat</h1>
-      <textarea
-        rows="4"
-        cols="50"
-        placeholder="Enter your message..."
-        value={userInput}
-        onChange={(e) => setUserInput(e.target.value)}
-      ></textarea>
-      <br />
-      <button onClick={sendMsgToOpenAI}>Send to OpenAI</button>
-      {generatedResponse && (
-        <div>
-          <h2>Generated Response:</h2>
-          <p>{JSON.stringify(generatedResponse)}</p>
-
-        </div>
-      )}
-    </div>
+    <Router>
+      <Navbar />
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<Landing />} />
+          <Route path="/question" element={<Question />} />
+          <Route path="/shuffle" element={<Shuffle />} />
+          <Route path="/cta" element={<CTA />} />
+        </Routes>
+      </div>
+      <Navbar />
+    </Router>
   );
 }
 

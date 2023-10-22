@@ -1,0 +1,15 @@
+.banner-container {
+  background-image: url('../../assets/background.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: var(--primary-color);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-0 {
+  margin-bottom: 25%;
+}

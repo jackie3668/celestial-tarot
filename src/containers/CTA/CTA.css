@@ -1,0 +1,42 @@
+.cta-container {
+  padding: 5% 11%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.cta-text {
+  width: 550px;
+  height: 550px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.header-2-bold {
+  padding-bottom: 60px;
+}
+
+.link {
+  color: var(--background-color);
+}
+
+button {
+  background-color: var(--accent-4-color);
+  flex-direction: column;
+  border-radius: 100px;
+  border: none;
+  padding: 3% 2.5%;
+  margin-top: 60px;
+  width: fit-content;
+}
+
+button:hover {
+  transform: scale(0.9);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.cta-image {
+  width: 550px;
+  height: 550px;
+}
