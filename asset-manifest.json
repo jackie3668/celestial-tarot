@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/celestial-tarot/static/css/main.7a6e6d62.css",
+    "main.js": "/celestial-tarot/static/js/main.cb12971e.js",
+    "static/media/cloud1.png": "/celestial-tarot/static/media/cloud1.a688d957ed73f682ae36.png",
+    "static/media/background.png": "/celestial-tarot/static/media/background.344b914cfbe6b2b2fb1a.png",
+    "static/media/cloud2.png": "/celestial-tarot/static/media/cloud2.a4320c3bf6d0b979430f.png",
+    "static/media/cta-image.png": "/celestial-tarot/static/media/cta-image.c534c4516708332fe248.png",
+    "static/media/cloud5.png": "/celestial-tarot/static/media/cloud5.d2f8bb513f9b12a73c7f.png",
+    "static/media/cloud3.png": "/celestial-tarot/static/media/cloud3.aa669983bbbe560b33db.png",
+    "static/media/cloud6.png": "/celestial-tarot/static/media/cloud6.e99128c4b41c9eeb573c.png",
+    "static/media/cloud4.png": "/celestial-tarot/static/media/cloud4.5136450ef5ad5b44b900.png",
+    "static/media/rightbirds.png": "/celestial-tarot/static/media/rightbirds.d798f60bb3edcf431af9.png",
+    "index.html": "/celestial-tarot/index.html",
+    "main.7a6e6d62.css.map": "/celestial-tarot/static/css/main.7a6e6d62.css.map",
+    "main.cb12971e.js.map": "/celestial-tarot/static/js/main.cb12971e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7a6e6d62.css",
+    "static/js/main.cb12971e.js"
+  ]
+}
