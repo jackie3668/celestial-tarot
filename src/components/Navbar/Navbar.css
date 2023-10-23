@@ -1,18 +1,25 @@
 .navbar-container {
   background-color: var(--primary-color);
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   padding: 0 10%;
 }
 
 .logo {
+  border: 2px solid red;
   cursor: pointer;
-  flex: 1;
 }
 
-nav {
-  flex: 1;
+.nav-links {
+  border: 2px solid red;
+  display: flex;
+  justify-content: space-between;
+}
+
+.link {
+  display: flex;
+  width: fit-content;
 }
 
 li {

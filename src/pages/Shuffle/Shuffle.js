@@ -1,12 +1,12 @@
 import React from 'react';
 import Header from '../../components/Navbar/Navbar';
+import './Shuffle.css';
 import { Link } from 'react-router-dom';
 
 const Shuffle = () => {
   return (
-    <div>
-      <Header />
-      <h1>shuffle</h1>
+    <div className='shuffle-container'>
+      
     </div>
   )
 }
