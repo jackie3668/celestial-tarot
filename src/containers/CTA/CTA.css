@@ -11,6 +11,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-right: 10%;
 }
 
 .header-2-bold {
@@ -26,13 +27,19 @@ button {
   flex-direction: column;
   border-radius: 100px;
   border: none;
-  padding: 3% 2.5%;
+  padding: 3% 5%;
   margin-top: 60px;
   width: fit-content;
 }
 
 button:hover {
-  transform: scale(0.9);
+  background-color: var(--accent-1-color);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+  background-color: var(--accent-1-color);
+  transform: scale(0.95);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 

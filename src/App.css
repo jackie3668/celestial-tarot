@@ -11,6 +11,7 @@
   --text-color: #000000;
   --background-color: #FFFFFF;
   --primary-color: #E7E8EA;
+  --accent-1-color: #499292;
   --accent-4-color: #667575;
 
   --header-0-font-family: 'Montserrat';
@@ -46,8 +47,15 @@
   --button-font-weight: 700;
   --button-line-height: normal;
   --button-text-transform: uppercase;
-}
 
+  --header-3-font-family: 'Montserrat';
+  --header-3-font-size: 24px;
+  --header-3-font-style: normal;
+  --header-3-font-weight: 400;
+  --header-3-line-height: 30px;
+  --header-3-letter-spacing: 1.2px;
+}
+/* Header 0 */
 .header-0 {
   font-family: var(--header-0-font-family);
   font-size: var(--header-0-font-size);
@@ -57,6 +65,7 @@
   letter-spacing: var(--header-0-letter-spacing);
 }
 
+/* Header 1 */
 .header-1 {
   font-family: var(--header-1-font-family);
   font-size: var(--header-1-font-size);
@@ -66,6 +75,7 @@
   letter-spacing: var(--header-1-letter-spacing);
 }
 
+/* Header 2 Bold */
 .header-2-bold {
   font-family: var(--header-2-bold-font-family);
   font-size: var(--header-2-bold-font-size);
@@ -74,6 +84,17 @@
   line-height: var(--header-2-bold-line-height);
 }
 
+/* Header 3 */
+.header-3 {
+  font-family: var(--header-3-font-family);
+  font-size: var(--header-3-font-size);
+  font-style: var(--header-3-font-style);
+  font-weight: var(--header-3-font-weight);
+  line-height: var(--header-3-line-height);
+  letter-spacing: var(--header-3-letter-spacing);
+}
+
+/* Text */
 .text {
   font-family: var(--text-font-family);
   font-size: var(--text-font-size);
@@ -83,6 +104,7 @@
   letter-spacing: var(--text-letter-spacing);
 }
 
+/* Button */
 .button {
   font-family: var(--button-font-family);
   font-size: var(--button-font-size);
@@ -92,6 +114,7 @@
   text-transform: var(--button-text-transform);
 }
 
+/* Link */
 .link {
   text-decoration: none;
 }
