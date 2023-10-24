@@ -97,7 +97,6 @@ a {
 
 .cloud5-img {
   position: absolute;
-  /* border: 10px solid red; */
   bottom: 150px;
   right: 500px;
   width: 50%;
@@ -107,7 +106,6 @@ a {
 
 .cloud6-img {
   position: absolute;
-  /* border: 5px solid red; */
   bottom: 200px;
   right: 1200px;
   width: 50%;

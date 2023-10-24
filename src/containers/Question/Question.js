@@ -1,23 +1,9 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
 import './Question.css';
 
-function Question({userInput, setUserInput, handleQuestionClick} ) {
-  // const [userInput, setUserInput] = useState('');
-
+function Question({userInput, setUserInput, handleQuestionClick, handleQuestionKeyDown}) {
   const handleChange = (e) => {
     setUserInput(e.target.value)
-  }
-
-  // const handleQuestionClick = (e) => {
-  //   window.location.href = '/shuffle';
-  //   console.log('question',{userInput})
-  // }
-
-  const handleKeyDown = (e) => {
-    if (e.key === "Enter") {
-      window.location.href = '/shuffle';
-    }
   }
 
   return (
@@ -25,7 +11,7 @@ function Question({userInput, setUserInput, handleQuestionClick} ) {
       <div className="question-input-container">
         <div className="question-input-back">
           <div className="question-input-front">
-            <input className='header-3' type="text" value={userInput} onChange={handleChange} onKeyDown={handleKeyDown} placeholder='Ask a question'/>
+            <input className='header-3' type="text" value={userInput} onChange={handleChange} onKeyDown={handleQuestionKeyDown} placeholder='Ask a question'/>
           </div>
         </div>
           <button className='question-button' onClick={handleQuestionClick} >Ready</button>
