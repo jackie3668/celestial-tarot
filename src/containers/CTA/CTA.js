@@ -12,7 +12,7 @@ const CTA = () => {
             <br /> 
             A modern approach</h2>
           <p className="cta">Embrace a modern approach to Tarot. We offer on-the-go readings for instant guidance. Leave behind the cards and find clarity anytime, anywhere.</p>
-          <button className='cta-button'><Link to="/question" className='link'>GET A READING</Link></button>
+          <button className='cta-button'><Link to="/reading" className='link'>GET A READING</Link></button>
         </div>
         <div className="cta-image">
           <img src={require('../../assets/cta-image.png')} alt="cta image" />

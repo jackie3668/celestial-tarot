@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Banner, CTA } from './containers';
-import { Question, Shuffle, Landing } from './pages';
+import { Banner, CTA, Question, Shuffle } from './containers';
+import { Reading, Landing } from './pages';
 import { Navbar } from './components';
 import './App.css';
 
@@ -12,12 +12,10 @@ function App() {
       <div className="App">
         <Routes>
           <Route path="/" element={<Landing />} />
-          <Route path="/question" element={<Question />} />
-          <Route path="/shuffle" element={<Shuffle />} />
+          <Route path="/reading" element={<Reading />} />
           <Route path="/cta" element={<CTA />} />
         </Routes>
       </div>
-      <Navbar />
     </Router>
   );
 }

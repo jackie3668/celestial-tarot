@@ -1,9 +1,7 @@
-import Question from "./Question/Question";
-import Shuffle from "./Shuffle/Shuffle";
 import Landing from './Landing/Landing';
+import Reading from './Reading/Reading';
 
 export {
-  Question,
-  Shuffle,
-  Landing
+  Landing,
+  Reading,
 }

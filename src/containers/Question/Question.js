@@ -2,16 +2,17 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Question.css';
 
-function Question() {
-  const [userInput, setUserInput] = useState('');
+function Question({userInput, setUserInput, handleQuestionClick} ) {
+  // const [userInput, setUserInput] = useState('');
 
   const handleChange = (e) => {
     setUserInput(e.target.value)
   }
 
-  const handleClick = (e) => {
-    window.location.href = '/shuffle';
-  }
+  // const handleQuestionClick = (e) => {
+  //   window.location.href = '/shuffle';
+  //   console.log('question',{userInput})
+  // }
 
   const handleKeyDown = (e) => {
     if (e.key === "Enter") {
@@ -27,9 +28,7 @@ function Question() {
             <input className='header-3' type="text" value={userInput} onChange={handleChange} onKeyDown={handleKeyDown} placeholder='Ask a question'/>
           </div>
         </div>
-        <Link to="/shuffle">
-          <button className='question-button' onClick={handleClick} >Ready</button>
-        </Link>
+          <button className='question-button' onClick={handleQuestionClick} >Ready</button>
       </div>
 
 
