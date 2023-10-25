@@ -1,0 +1,21 @@
+.shuffle-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid red;
+}
+
+.shuffle-deck-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 80px;
+}
+
+.shuffle-card {
+  width: 112px; 
+  height: 188px; 
+  margin-right: -80px;
+}

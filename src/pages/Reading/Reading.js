@@ -14,7 +14,8 @@ const Reading = () => {
     setElementVisibility({
       ...elementVisibility, 
       question: false, 
-      shuffle: true})
+      shuffle: true
+    })
   }
 
   const handleQuestionKeyDown = (e) => {
@@ -22,14 +23,23 @@ const Reading = () => {
       setElementVisibility({
         ...elementVisibility, 
         question: false, 
-        shuffle: true})
+        shuffle: true
+      })
     }
+  }
+
+  const onShuffleClick = () => {
+    setElementVisibility({
+      ...elementVisibility, 
+      shuffle: false,
+      interpret: true
+    })
   }
 
   return (
     <div>
       {elementVisibility.question && <Question userInput={userInput} setUserInput={setUserInput} handleQuestionClick={handleQuestionClick} handleQuestionKeyDown={handleQuestionKeyDown}/> }
-      {elementVisibility.shuffle &&  <Shuffle userInput={userInput} /> }
+      {elementVisibility.shuffle &&  <Shuffle userInput={userInput} onShuffleClick={onShuffleClick}/> }
       {elementVisibility.interpret &&  <Interpret userInput={userInput} /> }
     </div>
   );
