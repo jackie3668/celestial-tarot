@@ -90,7 +90,7 @@ a {
   bottom: 10%;
   right: 30%;
   width: 50%;
-  animation: cloudAnimation 30s linear infinite;
+  animation: cloudAnimation 20s linear infinite;
   animation-delay: 0s, 0.5s; 
   z-index: 1;
 }
@@ -100,7 +100,7 @@ a {
   bottom: 150px;
   right: 500px;
   width: 50%;
-  animation: cloudAnimation 45s linear infinite;
+  animation: cloudAnimation 25s linear infinite;
   z-index: 1;
 }
 
@@ -109,7 +109,7 @@ a {
   bottom: 200px;
   right: 1200px;
   width: 50%;
-  animation: cloudAnimation 60s linear infinite;
+  animation: cloudAnimation 30s linear infinite;
   z-index: 1;
 }
 
@@ -120,11 +120,11 @@ a {
   }
   3% {
     transform: translateX(99%);
-    opacity: 0.75;
+    opacity: 1;
   }
   97% {
     transform: translateX(-99%);
-    opacity: 0.75;
+    opacity: 1;
   }
   100% {
     transform: translateX(-100%);
@@ -134,7 +134,7 @@ a {
 
 .leftbirds-img {
   position: absolute;
-  width: 25%;
+  width: 20%;
   bottom: 25px;
   left: 50px;
 }
@@ -146,23 +146,53 @@ a {
   right: 50px;
 }
 
-.leftbirds-img, .rightbirds-img {
+.leftbirds-img {
   transform: translate(-50%, -50%);
-  animation: birdAnimation 10s linear infinite;
+  animation: leftBirdAnimation 20s linear infinite;
 }
 
-@keyframes birdAnimation {
+.rightbirds-img {
+  transform: translate(-50%, -50%);
+  animation: rightBirdAnimation 15s linear infinite;
+}
+
+
+@keyframes leftBirdAnimation {
   0%, 100% {
-    transform: translate(0, 0); 
+    transform: translate(0, 0) scale(1.2); 
+    opacity: 0;
   }
   25% {
-    transform: translate(30px, -30px); 
+    transform: translate(30px, -30px) scale(1); 
+    opacity: 1;
   }
   50% {
-    transform: translate(0, 0); 
+    transform: translate(0, 0) scale(1.2); 
+    opacity: 1;
   }
   75% {
-    transform: translate(-30px, 30px); 
+    transform: translate(-30px, 30px) scale(1); 
+    opacity: 0;
+  }
+}
+
+
+@keyframes rightBirdAnimation {
+  0%, 100% {
+    transform: translate(0, 0) scale(1); 
+    opacity: 0;
+  }
+  25% {
+    transform: translate(30px, -30px) scale(1.2); 
+    opacity: 1;
+  }
+  50% {
+    transform: translate(0, 0) scale(1.2); 
+    opacity: 1;
+  }
+  75% {
+    transform: translate(-30px, 30px) scale(1); 
+    opacity: 0;
   }
 }
 

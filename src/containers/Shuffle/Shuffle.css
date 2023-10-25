@@ -3,6 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 5% 11%;
   border: 2px solid red;
 }
 
@@ -18,4 +19,8 @@
   width: 112px; 
   height: 188px; 
   margin-right: -80px;
+}
+
+.clicked {
+  margin-top: -40px
 }
