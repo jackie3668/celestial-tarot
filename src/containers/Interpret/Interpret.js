@@ -5,6 +5,7 @@ const Interpret = () => {
   return (
     <div>
       <h1>Interpret</h1>
+      
     </div>
   )
 }

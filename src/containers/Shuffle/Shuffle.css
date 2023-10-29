@@ -4,7 +4,10 @@
   justify-content: center;
   align-items: center;
   margin:0 11%;
-  border: 2px solid red;
+}
+
+h1 {
+  margin: 5% 5%;
 }
 
 .shuffle-deck-container {
@@ -13,14 +16,83 @@
   justify-content: center;
   align-items: center;
   margin-right: 80px;
+  margin-bottom: 10%;
 }
 
 .shuffle-card {
   width: 112px; 
   height: 188px; 
   margin-right: -80px;
+  cursor: pointer;
+  transition: margin-top 0.1s ease-in-out;
 }
 
-.clicked {
-  margin-top: -40px
+.shuffle-card:hover {
+  margin-top: -40px;
+}
+
+.selected-container {
+  width: 75%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.selected-container > div {
+  width: 112px;
+}
+
+.selected {
+  width: 112px; 
+  height: 188px;
+  margin-right: 0;
+  animation: myAnim 2s ease 0s 1 normal forwards;
+}
+
+@keyframes myAnim {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+.invisible {
+  display: none;
+}
+
+.visible {
+  display: block;
+  animation: myAnim 2s ease 0s 1 normal forwards;
+}
+
+.fadeOutDown {
+  -webkit-animation-name: fadeOutDown;
+  animation-name: fadeOutDown;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  }
+  
+@-webkit-keyframes fadeOutDown {
+  0% {
+  opacity: 1;
+  }
+  100% {
+  opacity: 0;
+  -webkit-transform: translate3d(0, 100%, 0);
+  transform: translate3d(0, 100%, 0);
+  }
+}
+@keyframes fadeOutDown {
+  0% {
+  opacity: 1;
+  }
+  100% {
+  opacity: 0;
+  -webkit-transform: translate3d(0, 100%, 0);
+  transform: translate3d(0, 100%, 0);
+  }
 }
