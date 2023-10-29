@@ -39,6 +39,7 @@ h1 {
 
 .selected-container > div {
   width: 112px;
+  cursor: pointer;
 }
 
 .selected {
@@ -68,31 +69,65 @@ h1 {
 }
 
 .fadeOutDown {
-  -webkit-animation-name: fadeOutDown;
   animation-name: fadeOutDown;
-  -webkit-animation-duration: 1s;
   animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
-  }
-  
-@-webkit-keyframes fadeOutDown {
-  0% {
-  opacity: 1;
-  }
-  100% {
-  opacity: 0;
-  -webkit-transform: translate3d(0, 100%, 0);
-  transform: translate3d(0, 100%, 0);
-  }
 }
+  
 @keyframes fadeOutDown {
   0% {
   opacity: 1;
   }
   100% {
   opacity: 0;
-  -webkit-transform: translate3d(0, 100%, 0);
   transform: translate3d(0, 100%, 0);
   }
+}
+
+.card {
+  width: 112px; 
+  height: 188px;
+  perspective: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border:  2px red;
+}
+
+.card.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+.card-inner {
+  width: 112px; 
+  height: 188px;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+  transform: rotateY(0);
+  border:  2px red;
+}
+
+.card-inner.flippedd {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  width: 112px; 
+  height: 188px;
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.card-back > img {
+  width: 112px; 
+  height: 188px;
+}
+
+.card-front {
+  background: pink;
+}
+
+.card-back {
+  background: lightblue;
+  transform: rotateY(180deg);
 }

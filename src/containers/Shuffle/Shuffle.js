@@ -19,23 +19,31 @@ const handleCardClick = (e) => {
     setTimeout(() => {
       card.classList.remove('fadeOutDown');
       card.classList.add('selected');
+      card.classList.remove('shuffle-card')
 
       const selectedContainer = document.querySelector('.selected-container');
       
       const index = selectedCards.length;
       
-      const divToAppendTo = selectedContainer.children[index];
+      const divToAppendTo = selectedContainer.querySelector(
+        `.card:nth-child(${index + 1}) .card-front`
+      );
       divToAppendTo.appendChild(card);
-
-      if (selectedCards.length === maxCards) {
-        setButtonVisibility(true);
-      }
     }, 700);
+    
+    if (selectedCards.length === (maxCards - 1)) {
+      setButtonVisibility(true);
+    }
   }
 };
 
-  const divWidth = (maxCards * 112) + (maxCards - 1) * 15
-  
+const divWidth = (maxCards * 112) + (maxCards - 1) * 15
+
+const handleCardFlip = (e) => {
+  console.log('Clicked Element:', e.currentTarget); 
+  e.currentTarget.classList.add('flipped')
+}
+
   return (
     <div className='shuffle-container'>
       <h1 className='header-1'>Choose Three Cards</h1>
@@ -52,9 +60,42 @@ const handleCardClick = (e) => {
       </div>
 
       <div className="selected-container" style={{ width: `${divWidth}px` }}>
-        <div></div>
-        <div></div>
-        <div></div>
+        <div className="card" onClick={handleCardFlip}>
+          <div className="card-inner">
+            <div className="card-front">Front of the card</div>
+            <div className="card-back">Back of the card
+              <img
+              src={require('../../assets/design-1/1.png')}
+              alt="tarot image"
+              />
+            </div>
+          </div>
+        </div>
+        
+        <div className="card">
+          <div className="card-inner">
+            <div className="card-front">Front of the card</div>
+            <div className="card-back">Back of the card
+              <img
+              src={require('../../assets/design-1/1.png')}
+              alt="tarot image"
+              />
+          </div>
+          </div>
+        </div>
+        
+        <div className="card">
+          <div className="card-inner">
+            <div className="card-front">Front of the card</div>
+            <div className="card-back">Back of the card
+              <img
+              src={require('../../assets/design-1/1.png')}
+              alt="tarot image"
+              />
+            </div>
+          </div>
+        </div>
+        
       </div>
 
       <button onClick={onShuffleClick} className={buttonVisibility ? 'visible' : 'invisible'}>Get My Results</button>

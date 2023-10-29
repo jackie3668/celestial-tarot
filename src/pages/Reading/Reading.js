@@ -44,7 +44,7 @@ const Reading = () => {
         {elementVisibility.shuffle &&  <Shuffle userInput={userInput} onShuffleClick={onShuffleClick}/> }
         {elementVisibility.interpret &&  <Interpret userInput={userInput} /> }
       </div>
-      <div className="cloud-container">
+      {/* <div className="cloud-container">
         <div className="cloud1">
           <img className="cloud1-img" src={require('../../assets/cloud1.png')} alt="cloud" />
         </div>
@@ -69,7 +69,7 @@ const Reading = () => {
         <div className="rightbirds">
           <img className="rightbirds-img" src={require('../../assets/rightbirds.png')} alt="birds" />
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }
