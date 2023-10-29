@@ -27,11 +27,12 @@ h1 {
   transition: margin-top 0.1s ease-in-out;
 }
 
-.shuffle-card:hover {
+.shuffle-card.hover-effect-class:hover {
   margin-top: -40px;
 }
 
 .selected-container {
+  position: relative;
   width: 75%;
   display: flex;
   justify-content: space-between;
@@ -39,7 +40,6 @@ h1 {
 
 .selected-container > div {
   width: 112px;
-  cursor: pointer;
 }
 
 .selected {
@@ -64,7 +64,19 @@ h1 {
 }
 
 .visible {
-  display: block;
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.5);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  border: none;
+  font-weight: 700;
+  font-size: 20px;
+  padding: 3% 5%;
+  margin-top: 60px;
+  height: 20px;
+  z-index: 999;
   animation: myAnim 2s ease 0s 1 normal forwards;
 }
 
@@ -91,7 +103,6 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  border:  2px red;
 }
 
 .card.flipped .card-inner {
@@ -101,9 +112,8 @@ h1 {
   width: 112px; 
   height: 188px;
   transform-style: preserve-3d;
-  transition: transform 0.5s;
+  transition: transform 0.7s;
   transform: rotateY(0);
-  border:  2px red;
 }
 
 .card-inner.flippedd {
@@ -123,11 +133,8 @@ h1 {
   height: 188px;
 }
 
-.card-front {
-  background: pink;
-}
-
 .card-back {
   background: lightblue;
   transform: rotateY(180deg);
 }
+
