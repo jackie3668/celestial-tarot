@@ -3,7 +3,7 @@
 }
 
 .component-container {
-  height: 50vh;
+  min-height: 50vh;
 }
 
 .cloud-container {

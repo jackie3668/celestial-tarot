@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import './Interpret.css';
 
-const Interpret = ({generatedResponse}) => {
-  const Response = generatedResponse.split('\n').filter(paragraph => paragraph.trim() !== ''); 
+const Interpret = ({generatedResponse, cards}) => {
+  const response = generatedResponse.split('\n').filter(paragraph => paragraph.trim() !== ''); 
   
   const maxCards = 3;
   const headings = ['Channeling the Spirit...', 'Calling the Divine...', 'Unlocking Mystical Insights...', 'Seeking Guidance from the Stars...', 'Harmonizing Mind and Soul...', 'Awakening Your True Self...'];
@@ -18,27 +18,46 @@ const Interpret = ({generatedResponse}) => {
     };
   }, []);
 
-
+  
   return (
     <div className='interpret-container'>
       <h1 className='header-1'>Interpretation</h1>
-      <div className="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
-      <p>{generatedResponse}</p>
-      
-      {Response.length > 0 ? (
-        Response.map((item, index) => (
-          <p key={index}>{item}</p>
-        ))
-      ) : (
+
+      {response.length === 0 && <div className="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>}
+      {response.length === 0 && (
         headings.map((text, index) => (
-        <div
-          key={index}
-          className={`${index === currentHeadingIndex ? '' : 'hidden'}`}
-        >
-          <h2 className='tracking-expand-contract'>{text}</h2>
+          <div
+            key={index}
+            className={`${index === currentHeadingIndex ? 'your-class-name' : 'hidden'}`}
+          >
+            <h2 className='tracking-expand-contract'>{text}</h2>
+          </div>
+        ))
+      )}
+
+      {response.length > 0 && (
+        response.map((item, index) => (
+        <div>
+          <p>{cards[index]}</p>
+          <img 
+          className='card' 
+          src={require(`../../assets/design-1/${index}.png`)}
+          >
+          </img>
+          <p key={index}>{item}</p>
+          <div></div>
         </div>
-  
-      )))}
+        ))
+      )}
+
+      {response.length > 0 && (
+        <div>
+            <div> 
+                {response[response.length-1]}
+            </div>
+            <button>Restart</button>
+        </div>
+      )}
 
     </div>
   )
