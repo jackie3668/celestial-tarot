@@ -10,10 +10,20 @@ const [buttonVisibility, setButtonVisibility] = useState(false);
 
 const handleCardClick = (e) => {
   const card = e.target;
+  console.log(e.target)
   const selectedCards = document.querySelectorAll('.selected');
 
+  
   if (selectedCards.length < cardsNum) {
     card.classList.add('fadeOutDown');
+
+    const randomNumber = Math.floor(Math.random() * 78) + 1;
+    
+    if (!indices.includes(randomNumber)) {
+      setIndices((prevIndices) => [...prevIndices, randomNumber]);
+    }
+
+    console.log(indices);
 
     setTimeout(() => {
       card.classList.remove('fadeOutDown');
@@ -26,19 +36,8 @@ const handleCardClick = (e) => {
         `.card:nth-child(${selectedCards.length+ 1}) .card-front`
       );
 
-      divToAppendTo.appendChild(card);
-
-      const randomNumber = Math.floor(Math.random() * 78) + 1;
-      if (!indices.includes(randomNumber)) {
-          setIndices((prevIndices) => [...prevIndices, randomNumber]);
-      }
-
-      
-      const divToAppendTo = selectedContainer.querySelector(
-        `.card:nth-child(${selectedCards.length+ 1}) .card-front`
-      );
-      
-
+      divToAppendToFront.appendChild(card);
+  
       setTimeout(() => {
         const parentCard = card.closest('.card');
         parentCard.classList.add('flipped');
@@ -55,6 +54,8 @@ const handleCardClick = (e) => {
     }
   }
 };
+
+
 
 const divWidth = (cardsNum * 112) + (cardsNum - 1) * 15
 
@@ -75,41 +76,20 @@ const divWidth = (cardsNum * 112) + (cardsNum - 1) * 15
 
       <p>{indices}</p>
       <div className="selected-container" style={{ width: `${divWidth}px` }}>
-        <div className="card">
+        {Array.from({ length: cardsNum }).map((_, index) => (
+        <div className="card" key={index}>
           <div className="card-inner">
             <div className="card-front"></div>
             <div className="card-back">
               <img
-              src={require('../../assets/design-1/1.png')}
+              className='shuffle-card hover-effect-class'
+              src={require(`../../assets/design-1/${indices[index]}.png`)} 
               alt="tarot image"
               />
             </div>
           </div>
         </div>
-        
-        <div className="card">
-          <div className="card-inner">
-            <div className="card-front"></div>
-            <div className="card-back">
-              <img
-              src={require('../../assets/design-1/1.png')}
-              alt="tarot image"
-              />
-            </div>
-          </div>
-        </div>
-        
-        <div className="card">
-          <div className="card-inner">
-            <div className="card-front"></div>
-            <div className="card-back">
-              <img
-              src={require('../../assets/design-1/1.png')}
-              alt="tarot image"
-              />
-            </div>
-          </div>
-        </div>
+        ))}
         
       </div>
 
