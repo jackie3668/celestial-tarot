@@ -11,6 +11,7 @@
   position: relative;
   width: 80px;
   height: 80px;
+  margin: 10% 0;
 }
 
 .lds-roller div {
@@ -111,8 +112,7 @@
 }
 
 .tracking-expand-contract {
-  margin-top: 15%;
-  animation: tracking-expand-contract 3s cubic-bezier(0.215, 0.610, 0.355, 1.000) both infinite;
+  animation: tracking-expand-contract 4s cubic-bezier(0.215, 0.610, 0.355, 1.000) both infinite;
 }
 
 .hidden {
@@ -131,7 +131,7 @@
   30% {
     opacity: 0.6;
   }
-  50% {
+  60% {
     letter-spacing: 0;
     opacity: 1;
   }
@@ -139,4 +139,8 @@
     letter-spacing: 0;
     opacity: 1;
   }
+}
+
+h2 {
+  font-weight: lighter;
 }

@@ -5,13 +5,13 @@ const Interpret = ({generatedResponse}) => {
   const Response = generatedResponse.split('\n').filter(paragraph => paragraph.trim() !== ''); 
   
   const maxCards = 3;
-  const headings = ['Heading 1', 'Heading 2', 'Heading 3'];
+  const headings = ['Channeling the Spirit...', 'Calling the Divine...', 'Unlocking Mystical Insights...', 'Seeking Guidance from the Stars...', 'Harmonizing Mind and Soul...', 'Awakening Your True Self...'];
   const [currentHeadingIndex, setCurrentHeadingIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentHeadingIndex((prevIndex) => (prevIndex + 1) % headings.length);
-    }, 3000); 
+    }, 4000); 
 
     return () => {
       clearInterval(interval); 
@@ -35,7 +35,7 @@ const Interpret = ({generatedResponse}) => {
           key={index}
           className={`${index === currentHeadingIndex ? '' : 'hidden'}`}
         >
-          <p className='tracking-expand-contract'>{text}</p>
+          <h2 className='tracking-expand-contract'>{text}</h2>
         </div>
   
       )))}
