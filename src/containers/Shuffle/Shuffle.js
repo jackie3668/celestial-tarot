@@ -3,10 +3,7 @@ import './Shuffle.css';
 import tarotIndex from '../../data/tarot-index.json';
 
 const Shuffle = ({ userInput, onShuffleClick, cardsNum, setCardsNum, indices, setIndices, cards, setCards, reversed, setReversed }) => {
-  useEffect(() => {
-    console.log('User Input:', userInput);
-  }, [userInput]);
-
+  
 const [buttonVisibility, setButtonVisibility] = useState(false);
 
 const handleCardClick = (e) => {
@@ -19,7 +16,7 @@ const handleCardClick = (e) => {
   if (selectedCards.length < cardsNum) {
     card.classList.add('fadeOutDown');
     
-    // choose random numbers, add random numbers to indices, and add tarot names to cards
+    // choose random numbers, add random numbers to indices, and add tarot names to cards, add reversals to reversed
     const randomNumber = Math.floor(Math.random() * 78) + 1;
     const reversal = Math.floor(Math.random() * 2)
 

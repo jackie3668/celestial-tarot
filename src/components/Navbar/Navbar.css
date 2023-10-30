@@ -18,6 +18,7 @@
 .link {
   display: flex;
   width: fit-content;
+  color: black;
 }
 
 li {

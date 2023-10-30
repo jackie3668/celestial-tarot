@@ -44,9 +44,11 @@ const Reading = () => {
     })
 
     try {
-      console.log("User Input:", userInput);
+
+      const prompt ='My question is: ' + userInput + 'There are a total number of ' + cardsNum + ' cards that I drawn. The cards I got are: ' + cards + ' the way they are facing are as indicated in this array, 0 for upright, 1 for reversed, respectively:' + reversed + '. Give a paragraph interpretation per card(75 words, separated by line break) starting with the card name and taking upright/reverse into account. Lastly, give one paragraph summary(100words). Always try to give straightforward clear answers. If my question is in chinese, please return the response in chinese too.' 
+      console.log(prompt)
       const response = await axios.post('https://celestial-tarot-api-505d7e2bd446.herokuapp.com/sendMsgToOpenAI', {
-        userMessage: userInput,
+        userMessage: prompt,
       });
 
       console.log("Axios Response:", response);
