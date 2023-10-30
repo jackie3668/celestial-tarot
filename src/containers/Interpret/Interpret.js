@@ -37,14 +37,14 @@ const Interpret = ({generatedResponse, cards}) => {
 
       {response.length > 0 && (
         response.map((item, index) => (
-        <div>
+        <div key={index}>
           <p>{cards[index]}</p>
           <img 
           className='card' 
           src={require(`../../assets/design-1/${index}.png`)}
           >
           </img>
-          <p key={index}>{item}</p>
+          <p>{item}</p>
           <div></div>
         </div>
         ))
