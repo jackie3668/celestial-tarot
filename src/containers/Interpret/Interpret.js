@@ -10,6 +10,7 @@ const Interpret = ({generatedResponse}) => {
     <div className='interpret-container'>
       <h1 className='header-1'>Interpretation</h1>
       <p>{generatedResponse}</p>
+      
     </div>
   )
 }

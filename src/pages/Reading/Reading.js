@@ -14,6 +14,7 @@ const Reading = () => {
   const [cardsNum, setCardsNum] = useState(3);
   const [cards, setCards] = useState([]);
   const [indices, setIndices] = useState([]);
+  const [reversed, setReversed] = useState([]);
 
   const handleQuestionClick = () => {
     setElementVisibility({
@@ -65,9 +66,33 @@ const Reading = () => {
   return (
     <div className='reading-container'>
       <div className='component-container'>
-        {elementVisibility.question && <Question userInput={userInput} setUserInput={setUserInput} handleQuestionClick={handleQuestionClick} handleQuestionKeyDown={handleQuestionKeyDown}/> }
-        {elementVisibility.shuffle &&  <Shuffle userInput={userInput} onShuffleClick={onShuffleClick} cardsNum={cardsNum} setCardsNuM={setCardsNum} cards={cards} setCards={setCards} indices={indices} setIndices={setIndices}/> }
-        {elementVisibility.interpret &&  <Interpret userInput={userInput} generatedResponse={generatedResponse} /> }
+        {elementVisibility.question && <Question 
+        userInput={userInput} 
+        setUserInput={setUserInput} 
+        handleQuestionClick={handleQuestionClick} 
+        handleQuestionKeyDown={handleQuestionKeyDown}
+        /> }
+
+        {elementVisibility.shuffle &&  <Shuffle 
+        userInput={userInput} 
+        onShuffleClick={onShuffleClick} 
+        cardsNum={cardsNum} 
+        setCardsNuM={setCardsNum} 
+        cards={cards} 
+        setCards={setCards} 
+        reversed={reversed}
+        setReversed={setReversed}
+        indices={indices} 
+        setIndices={setIndices}
+        /> }
+
+        {elementVisibility.interpret &&  <Interpret 
+        userInput={userInput} 
+        cardsNum={cardsNum} 
+        cards={cards}
+        generatedResponse={generatedResponse} 
+        indices={indices}
+        /> }
       </div>
       <div className="cloud-container">
         <div className="cloud1">
