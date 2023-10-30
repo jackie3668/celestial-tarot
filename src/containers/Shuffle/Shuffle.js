@@ -1,19 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import './Shuffle.css';
 
-const Shuffle = ({ userInput, onShuffleClick }) => {
+const Shuffle = ({ userInput, onShuffleClick, cardsNum, setCardsNum, indices, setIndices }) => {
   useEffect(() => {
     console.log('User Input:', userInput);
   }, [userInput]);
 
-const maxCards = 3;
 const [buttonVisibility, setButtonVisibility] = useState(false);
 
 const handleCardClick = (e) => {
   const card = e.target;
   const selectedCards = document.querySelectorAll('.selected');
 
-  if (selectedCards.length < maxCards) {
+  if (selectedCards.length < cardsNum) {
     card.classList.add('fadeOutDown');
 
     setTimeout(() => {
@@ -23,12 +22,22 @@ const handleCardClick = (e) => {
 
       const selectedContainer = document.querySelector('.selected-container');
 
-      const index = selectedCards.length;
-
-      const divToAppendTo = selectedContainer.querySelector(
-        `.card:nth-child(${index + 1}) .card-front`
+      const divToAppendToFront = selectedContainer.querySelector(
+        `.card:nth-child(${selectedCards.length+ 1}) .card-front`
       );
+
       divToAppendTo.appendChild(card);
+
+      const randomNumber = Math.floor(Math.random() * 78) + 1;
+      if (!indices.includes(randomNumber)) {
+          setIndices((prevIndices) => [...prevIndices, randomNumber]);
+      }
+
+      
+      const divToAppendTo = selectedContainer.querySelector(
+        `.card:nth-child(${selectedCards.length+ 1}) .card-front`
+      );
+      
 
       setTimeout(() => {
         const parentCard = card.closest('.card');
@@ -36,20 +45,18 @@ const handleCardClick = (e) => {
       }, 500);
     }, 500);
 
-    if (selectedCards.length === (maxCards - 1)) {
+    if (selectedCards.length === (cardsNum - 1)) {
       setButtonVisibility(true);
       const shuffleCards = document.querySelectorAll('.shuffle-card');
       shuffleCards.forEach((shuffleCard) => {
         shuffleCard.style.cursor = 'not-allowed';
         shuffleCard.classList.remove('hover-effect-class');
-        
       });
-
     }
   }
 };
 
-const divWidth = (maxCards * 112) + (maxCards - 1) * 15
+const divWidth = (cardsNum * 112) + (cardsNum - 1) * 15
 
   return (
     <div className='shuffle-container'>
@@ -66,6 +73,7 @@ const divWidth = (maxCards * 112) + (maxCards - 1) * 15
         ))}
       </div>
 
+      <p>{indices}</p>
       <div className="selected-container" style={{ width: `${divWidth}px` }}>
         <div className="card">
           <div className="card-inner">
