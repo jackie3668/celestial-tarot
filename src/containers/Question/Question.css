@@ -8,7 +8,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 10%;
+  padding-top: 20%;
 }
 
 .question-input-back {
@@ -34,6 +34,7 @@
 }
 
 input {
+  width: 59%;
   padding: 15px;
   color: var(--text-color);
   outline: none; 

@@ -44,8 +44,11 @@ const Reading = () => {
     })
 
     try {
-
-      const prompt ='My question is: ' + userInput + 'There are a total number of ' + cardsNum + ' cards that I drawn. The cards I got are: ' + cards + ' the way they are facing are as indicated in this array, 0 for upright, 1 for reversed, respectively:' + reversed + '. Only one paragraph interpretation per card(50 words, separated by line break) starting with the card name at the beginning of the paragraph, taking upright/reverse into account. Lastly, give one paragraph summary(50 words). Always try to give straightforward clear answers. If my question is in chinese, please return the response in chinese too.' 
+      const cardStates = cards.map((card, index) => {
+        const reversedStatus = reversed[index] === 1 ? 'reversed' : 'upright';
+        return `${card} ${reversedStatus}`;
+      });
+      const prompt ='My question is: ' + userInput + ' I drew ' + cardsNum + ' cards. They are: ' + cardStates + '. Only one paragraph interpretation per card(50 words, separated by line break) starting with the card name at the beginning. Take upright/reverse into account. Lastly, give one paragraph summary(50 words). Give straightforward clear answers.' 
       console.log(prompt)
       const response = await axios.post('https://celestial-tarot-api-505d7e2bd446.herokuapp.com/sendMsgToOpenAI', {
         userMessage: prompt,
@@ -63,6 +66,19 @@ const Reading = () => {
     } catch (error) {
       console.error('Error:', error);
     }    
+  }
+
+  const handleRestart = () => {
+    setElementVisibility({
+      ...elementVisibility, 
+      question: true,
+      interpret: false
+    })
+    setCards(3);
+    setUserInput('');
+    setCards([]);
+    setIndices([]);
+    setReversed([]);
   }
 
   return (
@@ -94,7 +110,8 @@ const Reading = () => {
         cards={cards}
         reversed={reversed}
         indices={indices}
-        generatedResponse={generatedResponse} 
+        generatedResponse={generatedResponse}
+        handleRestart={handleRestart} 
         /> }
       </div>
       <div className="cloud-container">
