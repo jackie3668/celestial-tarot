@@ -45,7 +45,7 @@ const Reading = () => {
 
     try {
 
-      const prompt ='My question is: ' + userInput + 'There are a total number of ' + cardsNum + ' cards that I drawn. The cards I got are: ' + cards + ' the way they are facing are as indicated in this array, 0 for upright, 1 for reversed, respectively:' + reversed + '. Give a paragraph interpretation per card(50 words, separated by line break) starting with the card name and taking upright/reverse into account. Lastly, give one paragraph summary(75words). Always try to give straightforward clear answers. If my question is in chinese, please return the response in chinese too.' 
+      const prompt ='My question is: ' + userInput + 'There are a total number of ' + cardsNum + ' cards that I drawn. The cards I got are: ' + cards + ' the way they are facing are as indicated in this array, 0 for upright, 1 for reversed, respectively:' + reversed + '. Only one paragraph interpretation per card(50 words, separated by line break) starting with the card name at the beginning of the paragraph, taking upright/reverse into account. Lastly, give one paragraph summary(50 words). Always try to give straightforward clear answers. If my question is in chinese, please return the response in chinese too.' 
       console.log(prompt)
       const response = await axios.post('https://celestial-tarot-api-505d7e2bd446.herokuapp.com/sendMsgToOpenAI', {
         userMessage: prompt,
@@ -92,8 +92,9 @@ const Reading = () => {
         userInput={userInput} 
         cardsNum={cardsNum} 
         cards={cards}
-        generatedResponse={generatedResponse} 
+        reversed={reversed}
         indices={indices}
+        generatedResponse={generatedResponse} 
         /> }
       </div>
       <div className="cloud-container">

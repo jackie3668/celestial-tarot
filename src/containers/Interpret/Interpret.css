@@ -145,3 +145,18 @@
 h2 {
   font-weight: lighter;
 }
+
+.card-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  margin: 3% 0;
+}
+
+.card {
+  margin-right: 2%;
+}
+
+.card-interpretation {
+  margin: 1% 0;
+}
