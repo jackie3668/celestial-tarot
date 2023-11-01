@@ -7,13 +7,12 @@ import './App.css';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/celestial-tarot">
       <Navbar />
       <div className="App">
         <Routes>
           <Route path="/" element={<Landing />} />
           <Route path="/reading" element={<Reading />} />
-          <Route path="/cta" element={<CTA />} />
         </Routes>
       </div>
     </Router>
