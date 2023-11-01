@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Banner, CTA, Question, Shuffle } from './containers';
 import { Reading, Landing } from './pages';
-import { Navbar } from './components';
+import { Footer, Navbar } from './components';
 import './App.css';
 
 function App() {
@@ -15,6 +15,7 @@ function App() {
           <Route path="/reading" element={<Reading />} />
         </Routes>
       </div>
+      <Footer />
     </Router>
   );
 }

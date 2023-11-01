@@ -1,0 +1,30 @@
+.features-container {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background-color);
+}
+
+.header-2 {
+  text-align: center
+}
+
+.features {
+  margin: 5% 11%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.feature-container {
+  flex: 1;
+  text-align: center;
+  padding: 20px;
+}
+
+.icon-img {
+  width: 150px;
+  height: 150px;
+}
+
+.header-3 {
+  margin: 8% 0 5% 0;
+}
