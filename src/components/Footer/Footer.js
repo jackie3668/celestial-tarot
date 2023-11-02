@@ -1,15 +1,51 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Footer.css';
+
+const currentYear = new Date().getFullYear(); // Get the current year
 
 const Footer = () => {
   return (
-    <div className='footer-container'>
-      <p>lorem</p>
-      <p>lorem</p>
-      <p>lorem</p>
-      <p>lorem</p>
-    </div>
-  )
-}
+    <footer className="footer-container">
+      <div className="divider">
+        <div className="footer-links">
+          <ul className="footer-nav">
+            <li className="footer-item">
+              <Link to="/" className="link">
+                About Us
+              </Link>
+            </li>
+            <span>|</span>
+            <li className="footer-item">
+              <Link to="/" className="link">
+                Contact
+              </Link>
+            </li>
+            <span>|</span>
+            <li className="footer-item">
+              <Link to="/terms" className="link">
+                Terms of Use
+              </Link>
+            </li>
+            <span>|</span>
+            <li className="footer-item">
+              <Link to="/privacy" className="link">
+                Privacy Policy
+              </Link>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div className="copyright-container">
+        <div className="footer-copyright">
+            Copyright © {currentYear} All Rights Reserved
+        </div>
+      </div>
 
-export default Footer
+
+    </footer>
+  );
+};
+
+export default Footer;

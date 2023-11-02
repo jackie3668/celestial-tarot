@@ -6,7 +6,7 @@ const Navbar = () => {
   return (
     <div className="navbar-container">
       <a href="/celestial-tarot" className="link">
-        <div className="logo header-1">LOGO</div>
+        <div className="logo header-1">Celestial</div>
       </a>
 
       <nav>

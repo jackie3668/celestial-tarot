@@ -28,7 +28,7 @@ li {
   padding: 10px 15px;
 }
 
-li:hover {
+.navbar-container li:hover {
   color: var(--background-color);
   background-color: var(--text-color);
   cursor: pointer;
