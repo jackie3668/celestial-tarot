@@ -1,8 +1,6 @@
 
 .footer-container {
-  margin-top: 10%;
   background-color: var(--accent-4-color); 
-  color: white;
   text-align: center;
 }
 
@@ -20,7 +18,7 @@
 }
 
 .footer-links .footer-item a {
-  color: white;
+  color: var(--text-color);
   text-decoration: none;
   transition: all 0.3s;
 }
@@ -38,6 +36,7 @@
 
 .footer-copyright {
   font-size: 14px;
+  color: var(--background-color);
 }
 
 .footer-container .divider {
@@ -47,5 +46,5 @@
   margin: 0;
   height: 100px;
   width: 100%;
-  background-color: var(--accent-1-color);
+  background-color: var(--primary-color);
 }

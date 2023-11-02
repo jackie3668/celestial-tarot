@@ -4,13 +4,14 @@
   justify-content: center;
   align-items: center;
   background-color: var(--background-color);
+  margin-bottom: 5%;
 }
 
 .features-container .header-2 {
   text-align: center;
 }
 
-.divider {
+.features-container .divider {
   display: flex;
   justify-content: center;
   align-items: center;
