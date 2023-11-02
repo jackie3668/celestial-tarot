@@ -8,7 +8,7 @@ const Features = () => {
   return (
     <div className='features-container'>
       <h2  className='header-2'>Why Celestial?</h2>
-
+      <div className='divider'> </div>
       <div className="features">
         <div className="feature-container">
           <img className='icon-img' src={icon3} alt="icon" />

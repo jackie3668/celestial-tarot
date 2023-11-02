@@ -129,11 +129,7 @@
   text-transform: var(--button-text-transform);
 }
 
-/* Link */
-.link {
-  text-decoration: none;
-}
-
+/* Body */
 body {
   overflow-x: hidden;
 }

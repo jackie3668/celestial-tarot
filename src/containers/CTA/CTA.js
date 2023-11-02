@@ -14,8 +14,8 @@ const CTA = () => {
             Tarot Reimagined:&nbsp;
             <br /> 
             A modern approach</h2>
-          <p className="cta">Embrace a modern approach to Tarot. We offer on-the-go readings for instant guidance. Leave behind the cards and find clarity anytime, anywhere.</p>
-          <button className='cta-button'><Link to="/reading" className='link'>GET A READING</Link></button>
+          <p className="cta text">Embrace a modern approach to Tarot. We offer on-the-go readings for instant guidance. Leave behind the cards and find clarity anytime, anywhere. </p>
+          <Link style={{ color: 'inherit', textDecoration: 'inherit'}} to="/reading" className='link'><button className='cta-button'>GET A READING</button></Link>
         </div>
         
       </div>
