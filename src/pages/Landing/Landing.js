@@ -1,5 +1,5 @@
 import React from 'react';
-import { Banner, CTA, Features } from '../../containers';
+import { Banner, CTA, Features, Educational } from '../../containers';
 
 const Landing = () => {
   return (
@@ -7,6 +7,7 @@ const Landing = () => {
       <Banner />
       <CTA />
       <Features />
+      <Educational />
     </div>
   )
 }

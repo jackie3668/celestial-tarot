@@ -43,6 +43,7 @@ input {
   outline: none; 
   border: none;
   background-color: rgba(255, 255, 255, 0); 
+  z-index: 999; 
 }
 
 .question-container a {
@@ -64,5 +65,6 @@ input {
   padding: 3% 5%;
   margin-top: 60px;
   height: 20px;
+  z-index: 999; 
 }
 

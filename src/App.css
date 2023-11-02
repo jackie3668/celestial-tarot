@@ -13,6 +13,7 @@
   --primary-color: #E7E8EA;
   --accent-1-color: #499292;
   --accent-2-color: #E8E5DF;
+  --accent-3-color: #D2C6C6;
   --accent-4-color: #667575;
 
   --header-0-font-family: 'Montserrat';
@@ -134,3 +135,95 @@
 body {
   overflow-x: hidden;
 }
+
+/* Responsive Design */
+@media (min-width: 576px) {
+  .header-0 {
+    font-size: 32px;
+  }
+
+  .header-1 {
+    font-size: 32px;
+  }
+
+  .header-2 {
+    font-size: 24px;
+  }
+
+  .header-2-bold {
+    font-size: 24px;
+  }
+
+  .header-3 {
+    font-size: 18px;
+  }
+
+  .button {
+    font-size: 16px;
+  }
+
+  .text {
+    font-size: 14x;
+  }
+}
+
+@media (min-width: 768px) {
+  .header-0 {
+    font-size: 36px;
+  }
+
+  .header-1 {
+    font-size: 36px;
+  }
+
+  .header-2 {
+    font-size: 28px;
+  }
+
+  .header-2-bold {
+    font-size: 28px;
+  }
+
+  .header-3 {
+    font-size: 20px;
+  }
+
+  .button {
+    font-size: 18px;
+  }
+
+  .text {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header-0 {
+    font-size: 60px;
+  }
+
+  .header-1 {
+    font-size: 60px;
+  }
+
+  .header-2 {
+    font-size: 48px;
+  }
+
+  .header-2-bold {
+    font-size: 48px;
+  }
+
+  .header-3 {
+    font-size: 36px;
+  }
+
+  .button {
+    font-size: 28px;
+  }
+
+  .text {
+    font-size: 24px;
+  }
+}
+
