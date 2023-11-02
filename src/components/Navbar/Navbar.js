@@ -5,7 +5,10 @@ import './Navbar.css';
 const Navbar = () => {
   return (
     <div className="navbar-container">
-      <div className="logo header-1"><Link to="/" className='link logo header-1'>LOGO</Link></div>
+      <a href="/celestial-tarot" className="link">
+        <div className="logo header-1">LOGO</div>
+      </a>
+
       <nav>
         <ul className="nav-links">
           <Link to="/" className='link'><li className='text'>Home</li></Link>
