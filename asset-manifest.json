@@ -1,9 +1,10 @@
 {
   "files": {
-    "main.css": "/celestial-tarot/static/css/main.c9bfb729.css",
-    "main.js": "/celestial-tarot/static/js/main.ca489f09.js",
+    "main.css": "/celestial-tarot/static/css/main.15430dfb.css",
+    "main.js": "/celestial-tarot/static/js/main.fb3f2c66.js",
     "static/media/cloud1.png": "/celestial-tarot/static/media/cloud1.a688d957ed73f682ae36.png",
     "static/media/background.png": "/celestial-tarot/static/media/background.344b914cfbe6b2b2fb1a.png",
+    "static/media/icon1.png": "/celestial-tarot/static/media/icon1.cd9abfa106e6c76d3f11.png",
     "static/media/14.png": "/celestial-tarot/static/media/14.3167f2af89bff7da3cfd.png",
     "static/media/cloud2.png": "/celestial-tarot/static/media/cloud2.a4320c3bf6d0b979430f.png",
     "static/media/11.png": "/celestial-tarot/static/media/11.93fa94f293ff6bdeab1a.png",
@@ -84,23 +85,22 @@
     "static/media/9.png": "/celestial-tarot/static/media/9.cd9eab004e7a516eb4dc.png",
     "static/media/17.png": "/celestial-tarot/static/media/17.2814f626fcd6129cf237.png",
     "static/media/2.png": "/celestial-tarot/static/media/2.bd93dce673b7c32f0482.png",
+    "static/media/icon3.png": "/celestial-tarot/static/media/icon3.91327d78b525c5379dca.png",
+    "static/media/icon2.png": "/celestial-tarot/static/media/icon2.8cfc9e2dbabd23a1fbe4.png",
     "static/media/cloud5.png": "/celestial-tarot/static/media/cloud5.d2f8bb513f9b12a73c7f.png",
-    "static/media/icon1.png": "/celestial-tarot/static/media/icon1.814e07506ba1dea196c6.png",
     "static/media/0.png": "/celestial-tarot/static/media/0.5f08147fa0cb2fc66688.png",
     "static/media/null.png": "/celestial-tarot/static/media/null.5f08147fa0cb2fc66688.png",
     "static/media/undefined.png": "/celestial-tarot/static/media/undefined.5f08147fa0cb2fc66688.png",
     "static/media/cloud3.png": "/celestial-tarot/static/media/cloud3.aa669983bbbe560b33db.png",
     "static/media/cloud6.png": "/celestial-tarot/static/media/cloud6.e99128c4b41c9eeb573c.png",
     "static/media/cloud4.png": "/celestial-tarot/static/media/cloud4.5136450ef5ad5b44b900.png",
-    "static/media/icon3.png": "/celestial-tarot/static/media/icon3.ee19872a9c136f9b5089.png",
-    "static/media/icon2.png": "/celestial-tarot/static/media/icon2.6ebdfada4be417392961.png",
     "static/media/rightbirds.png": "/celestial-tarot/static/media/rightbirds.d798f60bb3edcf431af9.png",
     "index.html": "/celestial-tarot/index.html",
-    "main.c9bfb729.css.map": "/celestial-tarot/static/css/main.c9bfb729.css.map",
-    "main.ca489f09.js.map": "/celestial-tarot/static/js/main.ca489f09.js.map"
+    "main.15430dfb.css.map": "/celestial-tarot/static/css/main.15430dfb.css.map",
+    "main.fb3f2c66.js.map": "/celestial-tarot/static/js/main.fb3f2c66.js.map"
   },
   "entrypoints": [
-    "static/css/main.c9bfb729.css",
-    "static/js/main.ca489f09.js"
+    "static/css/main.15430dfb.css",
+    "static/js/main.fb3f2c66.js"
   ]
 }
