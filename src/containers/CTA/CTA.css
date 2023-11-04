@@ -37,23 +37,24 @@
   align-items: center;
   border-radius: 100px;
   border: none;
-  font-weight: 800;
-  padding: 3% 5%;
   margin-top: 60px;
+  font-weight: 600;
+  font-size: large;
   height: 50px;
-  width: 150px;
+  width: 225px;
   color: 'inherit';
   text-decoration: 'inherit';
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
 }
 
-button:hover {
-  background-color: var(--accent-4-color);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+.cta-container button:hover {
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.2);
+  transform: translateX(15px);
 }
 
-button:active {
+.cta-container button:active {
   background-color: var(--accent-4-color);
-  transform: scale(0.95);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
