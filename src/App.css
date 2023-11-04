@@ -42,11 +42,18 @@
   --header-2-bold-font-weight: 700;
   --header-2-bold-line-height: normal;
 
+  --header-3-font-family: 'Montserrat';
+  --header-3-font-size: 24px;
+  --header-3-font-style: normal;
+  --header-3-font-weight: 400;
+  --header-3-line-height: 30px;
+  --header-3-letter-spacing: 1.2px;
+
   --text-font-family: 'Montserrat';
   --text-font-size: 16px;
   --text-font-style: normal;
   --text-font-weight: 400;
-  --text-line-height: 25px;
+  --text-line-height: 40px;
   --text-letter-spacing: 0.8px;
 
   --button-font-family: 'Montserrat';
@@ -56,13 +63,8 @@
   --button-line-height: normal;
   --button-text-transform: uppercase;
 
-  --header-3-font-family: 'Montserrat';
-  --header-3-font-size: 24px;
-  --header-3-font-style: normal;
-  --header-3-font-weight: 400;
-  --header-3-line-height: 30px;
-  --header-3-letter-spacing: 1.2px;
 }
+
 /* Header 0 */
 .header-0 {
   font-family: var(--header-0-font-family);
@@ -223,7 +225,7 @@ body {
   }
 
   .text {
-    font-size: 24px;
+    font-size: 20px;
   }
 }
 
