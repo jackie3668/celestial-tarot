@@ -156,21 +156,21 @@ button:active {
 }
 
 /* Responsive Design */
-@media (max-width: 767px) {
+@media (max-width: 764px) {
   .header-0 {
-    font-size: 28px;
+    font-size: 26px;
   }
 
   .header-1 {
-    font-size: 28px;
+    font-size: 26px;
   }
 
   .header-2 {
-    font-size: 24px;
+    font-size: 22px;
   }
 
   .header-2-bold {
-    font-size: 24px;
+    font-size: 22px;
   }
 
   .header-3 {
@@ -179,11 +179,19 @@ button:active {
   }
 
   .text {
-    font-size: 12px;
+    font-size: 14px;
+  }
+
+  .navbar-container li {
+    font-size: 10px;
   }
 
   .card {
     margin-right: 15px;
+  }
+
+  .navbar-container {
+    width: 100%;
   }
 
   .banner-container {
@@ -191,12 +199,16 @@ button:active {
     height: auto; 
     background-size: cover; 
     background-position: center center; 
+    padding-bottom: 50px;
   }
 
-  
 }
 
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 765px) and (max-width: 1023px) {
+  .menu {
+    display: none;
+  }
+
   .header-0 {
     font-size: 36px;
   }
@@ -238,6 +250,10 @@ button:active {
 }
 
 @media (min-width: 1024px) {
+  .menu {
+    display: none;
+  }
+  
   .header-0 {
     font-size: 60px;
   }
