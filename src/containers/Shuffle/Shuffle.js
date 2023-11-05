@@ -31,6 +31,10 @@ const handleCardClick = (e) => {
       card.classList.remove('fadeOutDown');
       card.classList.add('selected');
       card.classList.remove('shuffle-card');
+      const shuffleCards = document.querySelectorAll('.shuffle-card');
+      shuffleCards.forEach((shuffleCard) => {
+        shuffleCard.style.cursor = 'not-allowed';
+      });
 
       const selectedContainer = document.querySelector('.selected-container');
 
@@ -43,7 +47,14 @@ const handleCardClick = (e) => {
       setTimeout(() => {
         const parentCard = card.closest('.card');
         parentCard.classList.add('flipped');
-      }, 500);
+        console.log(selectedCards.length != (cardsNum - 1))
+        if (selectedCards.length != (cardsNum - 1)) {
+          shuffleCards.forEach((shuffleCard) => {
+            shuffleCard.style.cursor = 'pointer';
+          });
+        }
+      }, 300);
+
     }, 500);
 
     // if max cards chosen, display 'get results' button, remove pointer cursor and choose card effect

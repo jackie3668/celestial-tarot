@@ -15,6 +15,7 @@ const Reading = () => {
   const [cards, setCards] = useState([]);
   const [indices, setIndices] = useState([]);
   const [reversed, setReversed] = useState([]);
+  const [generatedResponse, setGeneratedResponse] = useState('');
 
   const handleQuestionClick = () => {
     setElementVisibility({
@@ -34,7 +35,6 @@ const Reading = () => {
     }
   }
 
-  const [generatedResponse, setGeneratedResponse] = useState('');
   const onShuffleClick =  async () => {
 
     setElementVisibility({
@@ -79,6 +79,7 @@ const Reading = () => {
     setCards([]);
     setIndices([]);
     setReversed([]);
+    setGeneratedResponse('');
   }
 
   return (
