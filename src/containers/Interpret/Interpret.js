@@ -21,19 +21,6 @@ const Interpret = ({generatedResponse, cards, reversed, indices, handleRestart})
   
   return (
     <div className='interpret-container'>
-      <h1 className='header-1'>Interpretation</h1>
-
-      {/* {response.length === 0 && <div className="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>} */}
-      {/* {response.length === 0 && (
-        headings.map((text, index) => (
-          <div
-            key={index}
-            className={`${index === currentHeadingIndex ? 'your-class-name' : 'hidden'}`}
-          >
-            <h2 className='tracking-expand-contract'>{text}</h2>
-          </div>
-        ))
-      )} */}
       <div className='interpretation-container'>
         {response.length > 0 ? (
           response.slice(0, -1)
@@ -83,7 +70,7 @@ const Interpret = ({generatedResponse, cards, reversed, indices, handleRestart})
               <p className='card-interpretation-text text'> 
                   {response[response.length-1]}
               </p>
-              <button className='button' onClick={handleRestart}>Restart</button>
+              <button onClick={handleRestart}>Restart</button>
           </div>
         )}
       </div>

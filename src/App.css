@@ -55,14 +55,6 @@
   --text-font-weight: 400;
   --text-line-height: 40px;
   --text-letter-spacing: 0.8px;
-
-  --button-font-family: 'Montserrat';
-  --button-font-size: 20px;
-  --button-font-style: normal;
-  --button-font-weight: 700;
-  --button-line-height: normal;
-  --button-text-transform: uppercase;
-
 }
 
 /* Header 0 */
@@ -123,16 +115,6 @@
   letter-spacing: var(--text-letter-spacing);
 }
 
-/* Button */
-.button {
-  font-family: var(--button-font-family);
-  font-size: var(--button-font-size);
-  font-style: var(--button-font-style);
-  font-weight: var(--button-font-weight);
-  line-height: var(--button-line-height);
-  text-transform: var(--button-text-transform);
-}
-
 /* Body */
 body {
   overflow-x: hidden;
@@ -149,24 +131,22 @@ button {
   border-radius: 25px;
   border: none;
   font-weight: 700;
-  font-size: 20px;
   width: fit-content;
   height: 50px;
+  font-size: 20px;
   padding: 0% 30px;
   margin-top: 60px;
   z-index: 999;
   transition: all 0.3s ease-in-out; 
 }
 
-
 button:hover {
-  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.2);
-  transform: translateX(15px);
+  background-color: var(--accent-1-color);
 }
 
 button:active {
   background-color: var(--accent-1-color);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transform: scale(0.95);
 }
 
 /* Responsive Design */
@@ -189,10 +169,6 @@ button:active {
 
   .header-3 {
     font-size: 18px;
-  }
-
-  .button {
-    font-size: 16px;
   }
 
   .text {
@@ -221,10 +197,6 @@ button:active {
     font-size: 20px;
   }
 
-  .button {
-    font-size: 18px;
-  }
-
   .text {
     font-size: 20px;
   }
@@ -249,10 +221,6 @@ button:active {
 
   .header-3 {
     font-size: 36px;
-  }
-
-  .button {
-    font-size: 28px;
   }
 
   .text {
