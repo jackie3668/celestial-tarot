@@ -18,7 +18,7 @@ const Educational = () => {
       <h1 className='header-1'>About Tarot</h1>
       <div className="educational-collapsible-section">
 
-        <p className='text'>Discover the history, symbolism, and practice of tarot reading, unlocking the secrets of divination and self-discovery in our educational section.</p>
+        <p className='text'>Discover the history, symbolism, and practice of tarot reading, unlocking the secrets of divination and self-discovery in this section.</p>
         
         <div className="divider"></div>
         <section>

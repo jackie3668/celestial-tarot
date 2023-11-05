@@ -7,7 +7,7 @@
 }
 
 .shuffle-container h1 {
-  margin: 5% 5%;
+  margin: 3% 0 5% 0;
 }
 
 .shuffle-deck-container {
@@ -16,7 +16,11 @@
   justify-content: center;
   align-items: center;
   margin-right: 80px;
-  margin-bottom: 10%;
+  margin-bottom: 3%;
+}
+
+.shuffle-container .card {
+  box-shadow: none;
 }
 
 .shuffle-card {
@@ -62,12 +66,12 @@
 }
 
 .invisible {
-  margin-bottom: 60px;
+  margin-bottom: 10px;
   display: none;
 }
 
 .visible {
-  margin-top: 60px;
+  margin-top: 10px;
   z-index: 999;
   animation: myAnim 2s ease 0s 1 normal forwards;
 }
@@ -88,18 +92,10 @@
   }
 }
 
-.card {
-  width: 112px; 
-  height: 188px;
-  perspective: 1000px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .card.flipped .card-inner {
   transform: rotateY(180deg);
 }
+
 .card-inner {
   width: 112px; 
   height: 188px;

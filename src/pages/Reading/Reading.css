@@ -9,6 +9,7 @@
 .cloud-container {
   position: relative;
   height: 50vh;
+  overflow-x: hidden;
 }
 
 .cloud1-img {

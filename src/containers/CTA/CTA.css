@@ -1,25 +1,24 @@
 .cta-container {
   padding: 5% 11%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
+  margin-bottom: 3%;
 }
 
 .cta-text {
-  width: 550px;
   height: 550px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: start;
   text-align: start;
-  margin: 0 3%;
 }
 
 .cta-container .header-2 {
   text-align: left;
   align-items: start;
-  padding-bottom: 60px;
+  padding-bottom: 50px;
 }
 
 .link {
@@ -37,7 +36,7 @@
   align-items: center;
   border-radius: 100px;
   border: none;
-  margin-top: 60px;
+  margin-top: 50px;
   font-weight: 600;
   font-size: large;
   height: 50px;
@@ -61,5 +60,5 @@
 .cta-image {
   width: 400px;
   height: auto;
-  margin-right: 10%;
+  margin-right: 5%;
 }

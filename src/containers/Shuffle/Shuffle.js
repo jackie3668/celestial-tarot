@@ -47,7 +47,6 @@ const handleCardClick = (e) => {
       setTimeout(() => {
         const parentCard = card.closest('.card');
         parentCard.classList.add('flipped');
-        console.log(selectedCards.length != (cardsNum - 1))
         if (selectedCards.length != (cardsNum - 1)) {
           shuffleCards.forEach((shuffleCard) => {
             shuffleCard.style.cursor = 'pointer';
@@ -74,7 +73,7 @@ const divWidth = (cardsNum * 112) + (cardsNum - 1) * 15
 
   return (
     <div className='shuffle-container'>
-      <h1 className='header-1'>Choose Three Cards</h1>
+      <h1 className='header-2'>Choose Three Cards</h1>
       <div className="shuffle-deck-container">
         {Array.from({ length: 30 }).map((_, index) => (
           <img
