@@ -11,8 +11,6 @@ const Educational = () => {
     paragraph.classList.toggle('invisible');
     }
   
-
-
   return (
     <div className="educational-container">
       <h1 className='header-1'>About Tarot</h1>
