@@ -4,6 +4,7 @@ import { Banner, CTA, Question, Shuffle } from './containers';
 import { Reading, Landing } from './pages';
 import { Footer, Navbar } from './components';
 import './App.css';
+import './Mobile.css';
 
 function App() {
   return (

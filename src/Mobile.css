@@ -1,0 +1,112 @@
+/* Responsive Design for max-width: 764px */
+@media (max-width: 764px) {
+  /* Update your font size and other styles for smaller screens */
+  :root {
+    --header-0-font-size: 26px;
+    --header-1-font-size: 26px;
+    --header-2-font-size: 22px;
+    --header-2-bold-font-size: 22px;
+    --header-3-font-size: 18px;
+    --header-3-font-weight: 500;
+    --text-font-size: 14px;
+  }
+
+  body {
+    border: 2px solid pink;
+  }
+
+  .button {
+    font-size: 16px; /* Update button font size */
+  }
+
+  .card {
+    width: 100%; /* Adjust card width to fill the screen */
+    height: auto; /* Make the card's height adapt to content */
+    margin-right: 0; /* Remove margin */
+  }
+
+  .navbar-container li {
+    font-size: 16px; /* Adjust font size for navigation links */
+  }
+
+  .navbar-container {
+    border: 2px solid red;
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+  }
+  .banner-container {
+    min-width: 100%; /* Make the banner fill the screen width */
+  }
+
+  /* Responsive Design for .cta-container at max-width: 764px */
+  .cta-container {
+    display: flex;
+    flex-direction: column; /* Stack content vertically on small screens */
+    align-items: center;
+    justify-content: center;
+  }
+
+  .cta-text {
+    height: auto; /* Allow the text height to adapt to the content */
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column; /* Stack content vertically on small screens */
+    align-items: center;
+    justify-content: center;
+    text-align: center; /* Add spacing between text and button */
+  }
+
+  .cta-container .header-2 {
+    padding-bottom: 20px; /* Reduce padding */
+  }
+
+  .cta-button {
+    max-width: 150px; /* Limit the maximum width of the button */
+    margin-top: 30px; /* Adjust top margin */
+  }
+
+  .cta-image {
+    display: none;
+  }
+
+  .link {
+    text-decoration: none;
+    color: inherit; /* Remove single quotes from 'inherit' */
+    text-decoration: inherit; /* Remove single quotes from 'inherit' */
+  }
+
+  .features-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .features {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .features-container .divider {
+    width: 100px;
+  }
+
+  .feature-container {
+    max-width: 75%;
+  }
+  
+.footer-links .footer-nav {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+}
