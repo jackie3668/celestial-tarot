@@ -23,12 +23,12 @@ const Navbar = () => {
       </div>
 
 
-      <nav className={`mobile-menu ${isMobileMenuOpen ? 'active' : 'hidden'}`}>
-        <ul className="nav-links">
-          <Link to="/" className='link'><li className='text'>Home</li></Link>
-          <Link to="/reading" className='link'><li className='text'>Get A Reading</li></Link>
-          <Link to="/" className='link'><li className='text'>About Us</li></Link>
-          <Link to="/" className='link'><li className='text'>Contact</li></Link>
+      <nav className={`desktop-menu mobile-menu ${isMobileMenuOpen ? 'active' : 'inactive'}`}>
+        <ul className={`desktop-menu mobile-menu ${isMobileMenuOpen ? 'active' : 'inactive'}`}>
+          <Link to="/" className='link' onClick={handleMenuToggle}><li className='text'>Home</li></Link>
+          <Link to="/reading" className='link' onClick={handleMenuToggle}><li className='text'>Get A Reading</li></Link>
+          <Link to="/" className='link' onClick={handleMenuToggle}><li className='text'>About Us</li></Link>
+          <Link to="/" className='link' onClick={handleMenuToggle}><li className='text'>Contact</li></Link>
         </ul>
       </nav>
     </div>

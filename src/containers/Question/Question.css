@@ -16,7 +16,7 @@
   padding-top: 10vh;
   min-width: 75vh;
   overflow-x: hidden;
-  z-index: 999; 
+  z-index: 998; 
 }
 
 .question-input-back {
@@ -27,7 +27,7 @@
   height: 70px;
   border-radius: 30px;
   background-color: rgba(255, 255, 255, 0.5);
-  z-index: 999; 
+  z-index: 998; 
 }
 
 .question-input-front {
@@ -39,7 +39,7 @@
   border: none;
   border-radius: 30px;
   background-color: rgba(255, 255, 255, 0.5);
-  z-index: 999; 
+  z-index: 998; 
 }
 
 input {
@@ -52,7 +52,7 @@ input {
   outline: none; 
   border: none;
   background-color: rgba(255, 255, 255, 0); 
-  z-index: 999; 
+  z-index: 998; 
 }
 
 .question-container a {
@@ -60,5 +60,5 @@ input {
   display: flex;
   justify-content: center;
   text-decoration: none;
-  z-index: 999; 
+  z-index: 998; 
 }
