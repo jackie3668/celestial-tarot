@@ -15,18 +15,21 @@
   position: absolute;
   bottom: 0;
   width: 100%;
+  overflow-x: hidden;
 }
 
 .cloud2-img {
   position: absolute;
   bottom: 0;
   width: 110%;
+  overflow-x: hidden;
 } 
 
 .cloud3-img {
   position: absolute;
   bottom: 0;
   width: 120%;
+  overflow-x: hidden;
 }
 
 .cloud4-img {
@@ -37,6 +40,7 @@
   animation: cloudAnimation 20s linear infinite;
   animation-delay: 0s, 0.5s; 
   z-index: 1;
+  overflow-x: hidden;
 }
 
 .cloud5-img {
@@ -46,6 +50,7 @@
   width: 50%;
   animation: cloudAnimation 25s linear infinite;
   z-index: 1;
+  overflow-x: hidden;
 }
 
 .cloud6-img {
@@ -55,6 +60,7 @@
   width: 50%;
   animation: cloudAnimation 30s linear infinite;
   z-index: 1;
+  overflow-x: hidden;
 }
 
 @keyframes cloudAnimation {
@@ -139,3 +145,5 @@
     opacity: 0;
   }
 }
+
+

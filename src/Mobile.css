@@ -21,18 +21,100 @@
     margin-right: 0; /* Remove margin */
   }
 
-  .navbar-container li {
-    font-size: 16px; /* Adjust font size for navigation links */
-  }
-
   .navbar-container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .mobile-header {
     background-color: var(--primary-color);
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     padding: 0 10%;
   }
+  
+  .mobile-menu .hidden {
+    display: none;
+  }
+
+  .mobile-menu.active {
+    position: absolute;
+    background-color: var(--primary-color);
+    width: 100%;
+    left: 0;
+    top: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  .mobile-menu.active .nav-links{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hamburger-menu {
+    position: absolute;
+    width: 20px;
+    top: 10px;
+    right: 8px;
+    z-index: 999;
+    height: 10px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .bar {
+    width: 100%;
+    height: 3px;
+    background-color: var(--text-color); 
+    transition: 0.4s;
+  }
+  
+  .hamburger-menu .bar:nth-child(1) {
+    transform: translateY(0px);
+  }
+  
+  .hamburger-menu .bar:nth-child(2) {
+    transform: translateY(6px);
+  }
+  
+  .hamburger-menu .bar:nth-child(3) {
+    transform: translateY(12px);
+  }
+  
+  .hamburger-menu.opened .bar:nth-child(1) {
+    transform: rotate(-45deg);
+    position: absolute;
+    width: 20px;
+    top: 10px;
+    right: 2px;
+    z-index: 999;
+  }
+  
+  .hamburger-menu.opened .bar:nth-child(2) {
+    opacity: 0;
+    position: absolute;
+    z-index: 999;
+  }
+  
+  .hamburger-menu.opened .bar:nth-child(3) {
+    transform: rotate(45deg);
+    position: absolute;
+    width: 20px;
+    top: 10px;
+    right: 2px;
+    z-index: 999;
+  }
+  
+  .navbar-container li {
+    font-size: 16px; 
+  }
+
   .banner-container {
     min-width: 100%; /* Make the banner fill the screen width */
   }
@@ -96,6 +178,11 @@
     max-width: 75%;
   }
   
+  .footer-container .divider {
+    height: fit-content;
+    padding: 10px;
+  }
+
   .footer-links .footer-nav {
     list-style: none;
     padding: 0;
@@ -113,5 +200,10 @@
   .educational-container .header-1 {
     padding: 15px 0;
   }
+
+  span {
+    display: none;
+  }
+
 
 }

@@ -1,19 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 
 const Navbar = () => {
-  const handleClick = () => {
+  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  }
+  const handleMenuToggle = () => {
+    setMobileMenuOpen(!isMobileMenuOpen);
+  };
+
   return (
     <div className="navbar-container">
-      <a href="/celestial-tarot" className="link">
-        <div className="logo header-1">Celestial</div>
-      </a>
+      <div className="mobile-header">
+        <a href="/celestial-tarot" className="link">
+          <div className="logo header-1">Celestial</div>
+        </a>
+        <div className={`hamburger-menu ${isMobileMenuOpen ? 'opened' : 'closed'}`} onClick={handleMenuToggle}>
+          <div className="bar"></div>
+          <div className="bar"></div>
+          <div className="bar"></div>
+        </div>
+      </div>
 
-      {/* <div className="menu" onClick={handleClick}>=</div> */}
-      <nav className='mobile-invisible'>
+
+      <nav className={`mobile-menu ${isMobileMenuOpen ? 'active' : 'hidden'}`}>
         <ul className="nav-links">
           <Link to="/" className='link'><li className='text'>Home</li></Link>
           <Link to="/reading" className='link'><li className='text'>Get A Reading</li></Link>
@@ -22,7 +32,7 @@ const Navbar = () => {
         </ul>
       </nav>
     </div>
-  )
+  );
 }
 
-export default Navbar
+export default Navbar;

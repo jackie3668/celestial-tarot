@@ -40,3 +40,6 @@ ul {
   justify-content: space-between;
 }
 
+.hamburger-menu {
+  display: none;
+}

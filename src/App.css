@@ -7,6 +7,11 @@
   box-sizing: border-box;
 }
 
+body {
+  overflow-x: hidden;
+  border: 3px solid red;
+}
+
 :root {
   --text-color: #000000;
   --background-color: #FFFFFF;
