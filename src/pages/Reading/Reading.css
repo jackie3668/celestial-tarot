@@ -1,5 +1,6 @@
 .reading-container {
   background-color: var(--primary-color);
+  height: 90vh;
 }
 
 .component-container {
@@ -7,8 +8,8 @@
 }
 
 .cloud-container {
-  height: 50vh;
   overflow-x: hidden;
+  min-height: 20vh;
 }
 
 .cloud1-img {

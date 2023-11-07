@@ -10,25 +10,25 @@ const Footer = () => {
       <div className="divider">
         <div className="footer-links">
           <ul className="footer-nav">
-            <li className="footer-item">
+            <li className="footer-item text">
               <Link to="/" className="link">
                 About Us
               </Link>
             </li>
             <span>|</span>
-            <li className="footer-item">
+            <li className="footer-item text">
               <Link to="/" className="link">
                 Contact
               </Link>
             </li>
             <span>|</span>
-            <li className="footer-item">
+            <li className="footer-item text">
               <Link to="/terms" className="link">
                 Terms of Use
               </Link>
             </li>
             <span>|</span>
-            <li className="footer-item">
+            <li className="footer-item text">
               <Link to="/privacy" className="link">
                 Privacy Policy
               </Link>
@@ -38,7 +38,7 @@ const Footer = () => {
       </div>
       
       <div className="copyright-container">
-        <div className="footer-copyright">
+        <div className="footer-copyright text">
             Copyright © {currentYear} All Rights Reserved
         </div>
       </div>

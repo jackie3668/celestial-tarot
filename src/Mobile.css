@@ -216,7 +216,6 @@
   }
   
   .footer-links .footer-item a:hover, .footer-links li:hover {
-    
     background-color: var(--primary-color);
     box-shadow: none;
     text-decoration: underline;
@@ -235,9 +234,21 @@
     display: none;
   }
 
-
   .question-input-container {
     padding-top: 35vh;
+  }
+
+  .shuffle-container {
+    padding-top: 20vh;
+  }
+
+  .shuffle-card {
+    width: 84px; 
+    height: 141px; 
+    margin-right: -70px;
+    cursor: pointer;
+    transition: margin-top 0.1s ease-in-out;
+    z-index: 999;
   }
 
 }

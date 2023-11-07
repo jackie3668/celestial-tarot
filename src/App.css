@@ -252,6 +252,19 @@ button:active {
     color: var(--accent-1-color);
     margin: 8% 0 5% 0;
   }
+
+  .navbar-container li {
+    font-size: 14px;
+  }
+  
+  .shuffle-card {
+    width: 112px; 
+    height: 188px; 
+    margin-right: -90px;
+    cursor: pointer;
+    transition: margin-top 0.1s ease-in-out;
+    z-index: 999;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -355,7 +368,7 @@ button:active {
   }
 
   .navbar-container li {
-    font-size: 18px;
+    font-size: 20px;
   }
 }
 
