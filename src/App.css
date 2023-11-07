@@ -265,6 +265,14 @@ button:active {
     transition: margin-top 0.1s ease-in-out;
     z-index: 999;
   }
+
+  .question-input-back {
+    min-width: 75vh;
+  }
+
+  .question-input-container {
+    min-width: 75vh;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -369,6 +377,14 @@ button:active {
 
   .navbar-container li {
     font-size: 20px;
+  }
+
+  .question-input-back {
+    min-width: 75vh;
+  }
+
+  .question-input-container {
+    min-width: 75vh;
   }
 }
 
