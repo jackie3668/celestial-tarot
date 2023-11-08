@@ -12,13 +12,11 @@
   }
   
   .button {
-    font-size: 16px; /* Update button font size */
+    font-size: 16px; 
   }
 
   .card {
-    width: 100%; /* Adjust card width to fill the screen */
-    height: auto; /* Make the card's height adapt to content */
-    margin-right: 0; /* Remove margin */
+    margin-right: 5px; 
   }
 
   .navbar-container {
@@ -225,6 +223,7 @@
   .educational-container {
     display: flex;
     flex-direction: column;
+    padding: 30px 50px 0px 50px;
   }
 
   .educational-container .header-1 {
@@ -241,15 +240,66 @@
 
   .shuffle-container {
     padding-top: 20vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
   }
 
   .shuffle-card {
-    width: 82px; 
+    width: 80px; 
     height: 140px; 
     margin-right: -72px;
     cursor: pointer;
     transition: margin-top 0.1s ease-in-out;
     z-index: 999;
+  }
+
+  .card-inner {
+    width: 80px; 
+    height: 140px;
+    transform-style: preserve-3d;
+    transition: transform 0.7s;
+    transform: rotateY(0);
+  }
+  
+  .card-inner.flippedd {
+    transform: rotateY(180deg);
+  }
+  
+  .card-front,
+  .card-back {
+    width: 80px; 
+    height: 140px;
+    position: absolute;
+    backface-visibility: hidden;
+  }
+  
+  .card-back > img {
+    width: 80px; 
+    height: 140px;
+  }
+
+  .selected-container {
+    position: relative;
+    width: 85%;
+    display: flex;
+    padding: 25px 0;
+    justify-content: space-evenly;
+    z-index: 999;
+  } 
+
+  .selected-container > div {
+    width: 80px;
+  }
+  
+  .selected {
+    width: 80px; 
+    height: 140px;
+    margin-right: 0;
+    animation: myAnim 2s ease 0s 1 normal forwards;
   }
 
   .question-container {
@@ -304,6 +354,25 @@
   }
 
   .interpret-container {
-    padding-top: 300px;
+    padding-top: 200px;
+  }
+
+  .card-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+  }
+
+  .card-img-text-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card-img-text-wrapper .card {
+    margin-bottom: 15px;
   }
 }

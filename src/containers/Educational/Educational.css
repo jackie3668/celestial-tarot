@@ -1,10 +1,8 @@
 .educational-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: start;
-  padding: 20px;
-  max-width: 900px;
-  margin: 0 auto 100px auto;
+  margin:50px 5% 50px 5%;
 }
 
 .educational-collapsible-section {
@@ -14,6 +12,7 @@
 .educational-container .header-1 {
   flex: 1;
   text-align: start;
+  margin-right: 10px;
 }
 
 .educational-container .divider {

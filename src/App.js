@@ -8,10 +8,14 @@ import './Mobile.css';
 
 function App() {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [readingKey, setReadingKey] = useState(1);
 
   // Render reading page when 'Get A Reading' is clicked
   const handleMenuToggle = (e) => {
     setMobileMenuOpen(!isMobileMenuOpen);
+    if (e.target.id === 'new-reading') {
+      setReadingKey(readingKey + 1);
+    }
   };
 
   return (
@@ -20,7 +24,7 @@ function App() {
       <div className="App">
         <Routes>
           <Route path="/" element={<Landing />} />
-          <Route path="/reading" element={<Reading key={isMobileMenuOpen} />} />
+          <Route path="/reading" element={<Reading key={readingKey} />} />
         </Routes>
       </div>
       <Footer />

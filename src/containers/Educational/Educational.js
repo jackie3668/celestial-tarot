@@ -52,13 +52,13 @@ const Educational = () => {
             <h3 className="collapsible-icon header-2" onClick={handleClick}>+</h3>
           </div>
           <p className="invisible text">
-            <p class="tarot-step">
+            <p className="tarot-step">
               <strong>Enter Your Question:</strong> Type a clear and specific question into the text field.
             </p>
-            <p class="tarot-step">
+            <p className="tarot-step">
               <strong>Choose Your Card:</strong> Click on a tarot card from the deck.
             </p>
-            <p class="tarot-step">
+            <p className="tarot-step">
               <strong>Card Interpretation:</strong> Instantly receive an interpretation of your selected card, including its symbolism and potential meanings.
             </p>
           </p>
