@@ -180,3 +180,12 @@
 .header-3 {
   margin: 2% 0;
 }
+
+.interpret-container .header-2 {
+  text-align: center;
+}
+
+.your-class-name {
+  padding-top: 250px;
+  position: fixed;
+}
