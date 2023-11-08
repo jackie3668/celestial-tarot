@@ -53,6 +53,7 @@
   .mobile-menu.active li, .mobile-menu.active a {
     text-align: center;
     width: 100%;
+    z-index: 999;
   }
 
   .hamburger-menu {
@@ -126,10 +127,9 @@
   }
 
   .banner-container {
-    min-width: 100%; /* Make the banner fill the screen width */
+    min-width: 100%; 
   }
 
-  /* Responsive Design for .cta-container at max-width: 764px */
   .cta-container {
     display: flex;
     flex-direction: column; /* Stack content vertically on small screens */
@@ -235,7 +235,6 @@
     display: none;
   }
 
-
   .question-input-container {
     padding-top: 35vh;
   }
@@ -254,7 +253,6 @@
   }
 
   .question-container {
-    max-width: 350px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -271,7 +269,6 @@
     z-index: 998; 
   }
 
-  
   .question-input-back {
     display: flex;
     justify-content: center;
