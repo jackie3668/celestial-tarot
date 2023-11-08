@@ -44,9 +44,7 @@
   justify-content: center;
   align-items: center;
   margin: 0;
-  padding-top: 50px;
   height: 100px;
   width: 100%;
   background-color: var(--primary-color);
-  height: 100px;
 }
