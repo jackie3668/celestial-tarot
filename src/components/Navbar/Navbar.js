@@ -2,13 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 
-const Navbar = () => {
-  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-  const handleMenuToggle = () => {
-    setMobileMenuOpen(!isMobileMenuOpen);
-  };
-
+const Navbar = ({handleMenuToggle, isMobileMenuOpen}) => {
   return (
     <div className="navbar-container">
       <div className="mobile-header">
@@ -26,7 +20,7 @@ const Navbar = () => {
       <nav className={`desktop-menu mobile-menu ${isMobileMenuOpen ? 'active' : 'inactive'}`}>
         <ul className={`desktop-menu mobile-menu ${isMobileMenuOpen ? 'active' : 'inactive'}`}>
           <Link to="/" className='link' onClick={handleMenuToggle}><li className='text'>Home</li></Link>
-          <Link to="/reading" className='link' onClick={handleMenuToggle}><li className='text'>Get A Reading</li></Link>
+          <Link to="/reading" className='link' onClick={handleMenuToggle}><li className='text' id='new-reading'>Get A Reading</li></Link>
           <Link to="/" className='link' onClick={handleMenuToggle}><li className='text'>About Us</li></Link>
           <Link to="/" className='link' onClick={handleMenuToggle}><li className='text'>Contact</li></Link>
         </ul>
