@@ -244,9 +244,9 @@
   }
 
   .shuffle-card {
-    width: 84px; 
-    height: 141px; 
-    margin-right: -70px;
+    width: 82px; 
+    height: 140px; 
+    margin-right: -72px;
     cursor: pointer;
     transition: margin-top 0.1s ease-in-out;
     z-index: 999;
