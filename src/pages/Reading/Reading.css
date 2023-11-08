@@ -5,10 +5,12 @@
   justify-content: center;
   align-items: center;
   background-color: var(--primary-color);
+  overflow-x: hidden;
 }
 
 .component-container {
   min-height: 50vh;
+  overflow-x: hidden;
 }
 
 .cloud-container {
