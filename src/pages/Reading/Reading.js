@@ -48,10 +48,12 @@ const Reading = () => {
         const reversedStatus = reversed[index] === 1 ? 'reversed' : 'upright';
         return `${card} ${reversedStatus}`;
       });
-      const prompt ='My question is: ' + userInput + ' I drew ' + cardsNum + ' cards. They are: ' + cardStates + '. Only one paragraph interpretation per card(50 words, separated by line break) starting with the card name at the beginning. Take upright/reverse into account. Lastly, give one paragraph summary(50 words). Give straightforward clear answers.' 
+      const prompt ='My question is: ' + userInput + ' I drew ' + cardsNum + ' cards. They are: ' + cardStates + '. Return 35 words per card, separated by line break, start with the card name at the beginning. Take upright/reverse into account. Lastly, give one paragraph summary(35 words). Give straightforward clear answers.' 
       console.log(prompt)
       const response = await axios.post('https://celestial-tarot-api-505d7e2bd446.herokuapp.com/sendMsgToOpenAI', {
         userMessage: prompt,
+      }, {
+        timeout: 60000, 
       });
 
       console.log("Axios Response:", response);
