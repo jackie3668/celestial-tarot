@@ -50,7 +50,7 @@ const Reading = () => {
       });
       const prompt ='My question is: ' + userInput + ' I drew ' + cardsNum + ' cards. They are: ' + cardStates + '. Return 35 words per card, separated by line break, start with the card name at the beginning. Take upright/reverse into account. Lastly, give one paragraph summary(35 words). Give straightforward clear answers.' 
       console.log(prompt)
-      const response = await axios.post('https://celestial-tarot-api-505d7e2bd446.herokuapp.com/sendMsgToOpenAI', {
+      const response = await axios.post('https://celestial-backend-bjdf.onrender.com/sendMsgToOpenAI', {
         userMessage: prompt,
       }, {
         timeout: 60000, 
